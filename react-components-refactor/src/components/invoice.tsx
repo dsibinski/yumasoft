@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Product } from '../viewModels/product';
 import { Customer } from '../viewModels/customer';
 import { ProductsList } from './productsList';
+import { CustomerSelector } from './customerSelector';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 type InvoiceProps = {
@@ -34,8 +35,11 @@ export class Invoice extends React.Component<InvoiceProps, InvoiceState> {
     render() {
         return (
             <div className="products-list">
-                
-                <ProductsList products={this.props.products} customer={this.state.customer}/>        
+                <CustomerSelector
+                    availableCustomers={this.props.availableCustomers}
+                    selectedCustomer={this.state.customer}
+                    onSelectionChange={this.onSelectionChange.bind(this)} />
+                <ProductsList products={this.props.products} customer={this.state.customer} />
             </div>)
     }
 }
