@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Product } from '../viewModels/product';
 import { Customer } from '../viewModels/customer';
-import { Container, Row, Col, DropdownButton, Dropdown } from 'react-bootstrap';
+import { DropdownButton, Dropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 type InvoiceProps = {
