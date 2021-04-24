@@ -11,6 +11,6 @@ export class ProductsDataProvider {
         {id: Guid.create(), name: "ASUS ZenBook laptop", description: "15 screen, 16 GB RAM, SSD", price: 2200.00, availableQuantity: 17},
         {id: Guid.create(), name: "Helmet", description: "Scooter helmet for your safety", price: 25.99, availableQuantity: 33},
         {id: Guid.create(), name: "ASUS charging cable", description: "Your ASUS cable is broken? We have a new one!", price: 5.50, availableQuantity: 6},
-        {id: Guid.create(), name: "Water", description: "Stay hydrated ;)", price: , availableQuantity: 457}]
+        {id: Guid.create(), name: "Water", description: "Stay hydrated ;)", price: 1.5, availableQuantity: 457}]
     }
 }
