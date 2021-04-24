@@ -45,23 +45,7 @@ export class Invoice extends React.Component<InvoiceProps, InvoiceState> {
                             {customer.name}
                         </Dropdown.Item>
                     ))}
-                </DropdownButton>
-                <Container>
-                    <Row className="products-header">
-                        <Col>Name</Col>
-                        <Col>Description</Col>
-                        <Col>Price</Col>
-                    </Row>
-                </Container>
-                {this.props.products.map(product =>
-                    <Container key={product.id.toString()}>
-                        <Row className="product-row">
-                            <Col>{product.name}</Col>
-                            <Col>{product.description}</Col>
-                            <Col>{(product.price - (product.price * (this.state.customer.loyaltyDiscount/100))).toFixed(2)}</Col>
-                        </Row>
-                    </Container>
-                )}
+                </DropdownButton>               
             </div>)
     }
 }
