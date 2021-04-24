@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Product } from '../viewModels/product';
 import { Customer } from '../viewModels/customer';
 import { DropdownButton, Dropdown } from 'react-bootstrap';
+import { ProductsList } from './productsList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 type InvoiceProps = {
@@ -45,7 +46,8 @@ export class Invoice extends React.Component<InvoiceProps, InvoiceState> {
                             {customer.name}
                         </Dropdown.Item>
                     ))}
-                </DropdownButton>               
+                </DropdownButton>
+                <ProductsList products={this.props.products} customer={this.state.customer}/>        
             </div>)
     }
 }

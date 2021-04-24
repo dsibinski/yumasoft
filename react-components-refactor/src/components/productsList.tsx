@@ -1,7 +1,15 @@
 import * as React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Customer } from '../viewModels/customer';
+import { Product } from '../viewModels/product';
 
-export class ProductsList extends React.Component {
+type ProductsListProps = {
+    products: Product[];
+    customer: Customer;
+}
+
+
+export class ProductsList extends React.Component<ProductsListProps> {
     render() {
         return (
             <div>
@@ -18,7 +26,7 @@ export class ProductsList extends React.Component {
                             <Row className="product-row">
                                 <Col>{product.name}</Col>
                                 <Col>{product.description}</Col>
-                                <Col>{(product.price - (product.price * (this.state.customer.loyaltyDiscount / 100))).toFixed(2)}</Col>
+                                <Col>{(product.price - (product.price * (this.props.customer.loyaltyDiscount / 100))).toFixed(2)}</Col>
                             </Row>
                         </Container>
                     )
